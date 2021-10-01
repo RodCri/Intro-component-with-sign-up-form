@@ -7,6 +7,7 @@
   <title>Frontend Mentor | Intro component with sign up form</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js"></script>
 </head>
 <body>
   <div class="content">
@@ -23,11 +24,28 @@
         <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
       </div>
       <div class="content__form-register">
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="text" placeholder="Email Address">
-        <input type="text" placeholder="Password">
-        <button>Claim your free trial</button>
+        <div>
+          <span id="tbFirstName-validator-symbol" class="validator-symbol hidden"></span>      
+          <input type="text" id="tbFirstName" name="tbFirstName" placeholder="First Name" class="form-input">
+          <div id="tbFirstName-invalid" class="validator-text hidden">First Name cannot be empty</div>
+        </div>
+        <div>
+          <span id="tbLastName-validator-symbol" class="validator-symbol hidden"></span>            
+            <input type="text" id="tbLastName" name="tbLastName" placeholder="Last Name" class="form-input">
+            <div id="tbLastName-invalid" class="validator-text hidden">Last Name cannot be empty</div>
+        </div>
+        <div>
+          <span id="tbEmail-validator-symbol" class="validator-symbol hidden"></span>
+            <span id="tbEmail-validator-example-email" class="validator-email hidden">email@example/com</span>
+            <input type="text" id="tbEmail" name="tbEmail" placeholder="Email Address" >
+            <div id="tbEmail-invalid" class="validator-text hidden">Looks like this is not an email</div>
+        </div>
+        <div>
+          <span id="tbPassword-validator-symbol" class="validator-symbol hidden"></span>          
+            <input type="password" id="tbPassword" name="tbPassword" placeholder="Password" class="form-input">
+            <div id="tbPassword-invalid" class="validator-text hidden">Password cannot be empty</div>
+        </div>
+        <button class="btn-submit" id="btnSubmit">Claim your free trial</button>
         <p>By clicking the button, you are agreeing to our <span> Terms and Services</span></p>
       </div>
     </div>
